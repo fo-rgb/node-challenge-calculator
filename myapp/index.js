@@ -50,6 +50,7 @@ app.get("/divide/:num1/:num2", function (request, response) {
   let resultados = d1 / d2;
 
   response.status(200).json({ result: resultados });
+  console.log(resultados);
 });
 
 app.listen(3000, () => console.log("running all server"));
