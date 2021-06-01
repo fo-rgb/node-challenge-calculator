@@ -29,4 +29,27 @@ app.get("/substract/:num1/:num2", function (request, response) {
   response.status(200).json({ result: resultado });
 });
 
+app.get("/multiply/:num1/:num2", function (request, response) {
+  let multiplyId = request.params.num1;
+  let multiplyId2 = request.params.num2;
+
+  let m1 = parseInt(multiplyId);
+  let m2 = parseInt(multiplyId2);
+
+  const resulta = m1 * m2;
+  response.status(200).json({ result: resulta });
+});
+
+app.get("/divide/:num1/:num2", function (request, response) {
+  let divideId = request.params.num1;
+  let divideId2 = request.params.num2;
+
+  let d1 = parseInt(divideId);
+  let d2 = parseInt(divideId2);
+
+  let resultados = d1 / d2;
+
+  response.status(200).json({ result: resultados });
+});
+
 app.listen(3000, () => console.log("running all server"));
